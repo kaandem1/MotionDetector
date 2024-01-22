@@ -1,0 +1,28 @@
+//java plugin for java project configuration
+apply plugin: 'java'
+
+//IDEA plugin for IntelliJ IDEA
+apply plugin: 'idea'
+
+//application plugin for creating runnable application
+apply plugin: 'application'
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+mainClassName = "Main"
+
+//config maven central as repository for dep
+repositories {
+    mavenCentral()
+}
+//def dependencies
+dependencies {
+    //spark framework for web app
+    implementation group: 'com.sparkjava', name: 'spark-core', version: '2.9.4'
+    //bytedeco for computer vision funct
+    implementation group: 'org.bytedeco', name: 'javacv-platform', version: '1.5.8'
+    //library for handling JSON data
+    implementation group: 'org.json', name: 'json', version: '20220924'
+    //Simple Logging Facade for Java with simple logger implementation
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.6'
+}

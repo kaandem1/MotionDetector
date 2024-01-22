@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Webcam Based Motion Detection System</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        #frame {
+            max-height: 90%;
+            max-width: 90%;
+            object-fit: contain;
+            display: block;
+            border: 3px solid #333;
+            box-shadow: 5px 5px 10px #888888;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Webcam Based Motion Detection System</h1>
+    <img id="frame" src="">
+</div>
+
+<script src="webSocket.js"></script>
+</body>
+</html>
